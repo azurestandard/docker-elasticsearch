@@ -1,0 +1,20 @@
+es:
+  image: shofetim/elasticsearch
+  # See configuration notes here:
+  # http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup-configuration.html
+  # They recommend some sysctl values, but there are issues: https://github.com/docker/docker/issues/4717
+  # with that.
+  environment:
+    # - "ES_HOME=/var/lib/elasticsearch"
+    # - ES_JAVA_OPTS environment variable in order to set / change JVM settings or arguments.
+    # - ES_HEAP_SIZE set the heap memory that will be allocated to elasticsearch java process
+  volumes:
+   # ES's default configuration has the following paths:
+   # logs: /var/log/elasticsearch
+   # data: /var/data/elasticsearch
+   - /var/log/elasticsearch:/var/log/elasticsearch
+   - /var/data/elasticsearch:/var/data/elasticsearch
+  ports:
+    - "9200:9200"
+    # - "9300:9300" For intra-cluster communications
+
