@@ -27,10 +27,10 @@ MAINTAINER Jordan Schatz "jordan@noionlabs.com"
 
 RUN \
   cd /tmp && \
-  wget --no-check-certificate https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.2.tar.gz && \
-  tar xvzf elasticsearch-1.3.2.tar.gz && \
-  rm -f elasticsearch-1.3.2.tar.gz && \
-  mv /tmp/elasticsearch-1.3.2 /elasticsearch
+  wget --no-check-certificate https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.9.tar.gz && \
+  tar xvzf elasticsearch-0.90.9.tar.gz && \
+  rm -f elasticsearch-0.90.9.tar.gz && \
+  mv /tmp/elasticsearch-0.90.9 /elasticsearch
 
 # Define default command.
 CMD ["/elasticsearch/bin/elasticsearch"]
